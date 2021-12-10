@@ -7,15 +7,19 @@ body {
     margin: 10px;
     border-radius: 25%;
 }
+.image:hover {
+    width: 200px;
+    height: 200px;
+}
 /* .image:hover{
     color: powderblue;
     transition: background-color .5s;
 } */
-div{
+    div{
     font-size: 20px;
     border-bottom: 5px solid black;
     padding: 15px;
-}
+} 
     
 a {
     text-decoration: none;

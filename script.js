@@ -9,6 +9,9 @@ const awwData = fetch("https://www.reddit.com/r/aww/.json")
 let maxCount = 10;
 awwData.then(data => {
     for(let i =0; i < maxCount; i++){
+        // let div = document.createElement('div')
+        // div.classList.add('originalDiv');
+        // body.append(div);
         let newDiv = document.createElement('div');
         
 
@@ -29,13 +32,16 @@ awwData.then(data => {
 })
 
 btn.addEventListener('click', () => {
+    //div.remove();
+    // let div = document.createElement('div');
+    // div.classList.add('originalDiv');
+    // body.append(div);
     let entered = input.value;
-
-    const awwData = fetch(`https://www.reddit.com/r/${entered}/.json`)
+    const newEntry = fetch(`https://www.reddit.com/r/${entered}/.json`)
 .then(res => res.json());
 
 let maxCount = 10;
-awwData.then(data => {
+newEntry.then(data => {
     for(let i =0; i < maxCount; i++){
         let newDiv = document.createElement('div');
         
