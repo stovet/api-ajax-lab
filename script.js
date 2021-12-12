@@ -31,9 +31,7 @@ awwData.then(data => {
 
 btn.addEventListener('click', () => {
     let children = div.childNodes;
-    console.log(children);
     let childrenLength = children.length
-    console.log(childrenLength);
     for(let i = 0; i < childrenLength; i++){
         div.firstChild.remove();
     }
@@ -41,9 +39,9 @@ btn.addEventListener('click', () => {
     const newEntry = fetch(`https://www.reddit.com/r/${entered}/.json`)
 .then(res => res.json());
 
-let maxCount = 10;
+
 newEntry.then(data => {
-    for(let i =0; i < maxCount; i++){
+    for(let i =0; i < data.data.children.length; i++){
         let newDiv = document.createElement('div');
         let newImage = document.createElement('img');
         newImage.classList.add('image');
