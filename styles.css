@@ -6,10 +6,12 @@ body {
     height: 100px;
     margin: 10px;
     border-radius: 25%;
+    transition: 0.5s
 }
 .image:hover {
     width: 200px;
     height: 200px;
+    transition: 0.5s;
 }
 /* .image:hover{
     color: powderblue;
